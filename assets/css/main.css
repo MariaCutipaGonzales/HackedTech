@@ -4,31 +4,82 @@
 	margin: auto;
 }
 body{
-	background-image: url(../img/estudio.jpg);
+	background-image: url(../img/fondo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
+}
+.circle{
+  border-radius: 50%;
+  border-color: white;
+  border:1px solid #ccc;
+  background-color:transparent;
+  color:#fff;
+  display:inline-block;
+  padding-left:8px;
+  padding-right:8px;
+  text-align:center;
+  cursor: pointer;
+}
+.circle:hover{
+  color:#000;
+  background-color:#fff;
+}
+.badge{
+  height:13px;
+  width:13px;
+  padding:0;
+}
+.slideShow{
+  color:#000!important;
+  background-color:#fff!important;
+}
+#bienvenido{
+	width: 450px;
+	height: 300px;
+	position: relative;
+	display: inline-block;
+	left: 60px;
+	top: 100px;
+}
+
+#bienvenido h1{
+	color: yellow;
+	font-size: 4rem;
+}
+
+#bienvenido p{
+	margin-top: 25px;
+	color:white;
+	font-size: 2.2rem;
 }
 #singin{
 	display: inline-block;
 	position: fixed;
 	width: 500px;
 	height: 500px;
-	right: 20px;
+	right: 70px;
 	bottom: 100px;
 	border-radius: 20px;
 	background-color: rgba(97, 126, 197, 0.4);
 }
 #ct-singin{
 	position: relative;
-	margin-top: 150px;
+	margin-top: 100px;
 	text-align: center;
+}
+#ct-singin h1{
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 20px;
 }
 #singin input{
 	padding: 20px 20px;
 	width: 350px;
 	margin-bottom: 20px;
+	border-radius: 10px;
+	border-color: transparent;
 }
 #singin button{
   display: inline-block;
@@ -38,8 +89,8 @@ body{
   color: #FFFFFF;
   text-align: center;
   font-size: 28px;
-  padding: 20px;
-  width: 200px;
+  padding: 15px;
+  width: 220px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -67,13 +118,12 @@ body{
 }
 /*SLIDE DIVS FORM*/
 .contentSlide {
-  background-color: rgba(188, 125, 99, 0.3);
   width: 100%;
   height: 100%;
   position: fixed;
 }
 .slide{
-	background-color: rgba(46, 0, 17, 0.3);
+	/*background-color: rgba(0, 0, 17, 0.1);*/
 	border-radius: 20px;
 	margin-top: 60px;
 	width: 80%;
@@ -82,8 +132,9 @@ body{
 .slide h1{
 	color: white;
 	position: relative;
+	font-size: 3rem;
 	top: 30px;
-	left: 30px;
+	left: 60px;
 }
 .options{
 	position: relative;
@@ -131,16 +182,26 @@ body{
 	color: white;
 }
 #arrows{
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
+  position: relative;
+  top: -330px;
+  width: 90%;
 }
-.left, .rigth{
-  font-size: 3rem;
-  cursor: pointer;
-  margin-left: 30px;
-  display: inline-block;
+.left{
+  float: left;
+  font-size: 6rem;
+}
+.rigth{
+  float: right;
+  font-size: 6rem;
+}
+.left , .rigth {
+	color:white;
+    cursor: pointer;
 }
 .left:hover, .rigth:hover{
 	opacity: 1;
+}
+#dots{
+	position: relative;
+	text-align: center;
 }

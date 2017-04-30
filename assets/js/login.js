@@ -7,4 +7,6 @@ document.getElementById("empezar").addEventListener("click",function(e){
 	}else{
 		name.focus();
 	}
+	name.value="";
+	lastname.value="";
 });
