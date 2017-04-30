@@ -13,11 +13,14 @@
 		</nav>
 	</header>
 	<section id="singin">
+	<form onsubmit="return false">
 		<div id="ct-singin">
-			<input type="text" id="name">
-			<input type="text" id="lastname">
-			<button><span>Empezar</span></button>
+			<input type="text" id="name" placeholder="Ingresa tu Nombre" required>
+			<input type="text" id="lastname" placeholder="Ingresa tu Apellido" required>
+			<button id="empezar"><span>Empezar</span></button>
 		</div>
+	</form>
 	</section>
+	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
