@@ -16,6 +16,7 @@ function showDivs(n) {
   var x = document.getElementsByClassName("slide");
   var dots = document.getElementsByClassName("dot");
   var colors = ["#ef6c00","#b71c1c","#283593","#388e3c"];
+  var button=document.getElementById("continuar");
   if (n > x.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = x.length}
       for (i = 0; i < x.length; i++) {
@@ -25,6 +26,7 @@ function showDivs(n) {
        dots[i].className = dots[i].className.replace(" slideShow", "");
        body.style.background=colors[0];
        body.style.background=colors[n-1];
+       button.style.background=colors[n-2];
      }
      x[slideIndex-1].style.display = "block";  
      dots[slideIndex-1].className += " slideShow";
@@ -47,6 +49,10 @@ document.getElementById("opc-4").addEventListener("click",function(e){
 	activate("opc4",e);
 });
 
+document.getElementById("continuar").addEventListener("click",function(e){
+ window.location="level2.html";
+});
+
  function activate(clase,event){
  	var opcion =document.getElementsByClassName(""+clase+"");
 	for (var i = 0; i < opcion.length; i++) {
@@ -57,4 +63,11 @@ document.getElementById("opc-4").addEventListener("click",function(e){
 	}
  }
 
-/*MARK*/
+document.getElementById("play").addEventListener("click",function(e){
+  document.getElementById("empieza").style.display="none";
+});
+
+/*APLICAR EFECTO OCULTAR Y MOSTRAR*/
+document.getElementById("ocultar").addEventListener("click",function(e){
+   
+});
