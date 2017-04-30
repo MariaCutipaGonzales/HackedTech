@@ -21,6 +21,9 @@ function showDivs(n) {
     if (n < 1) {slideIndex = x.length}
       for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";  
+       if (slideIndex ==4) {
+    document.getElementById("arrows").style.display="none";  
+   }
      }
      for (i = 0; i < dots.length; i++) {
        dots[i].className = dots[i].className.replace(" slideShow", "");
@@ -30,8 +33,8 @@ function showDivs(n) {
      }
      x[slideIndex-1].style.display = "block";  
      dots[slideIndex-1].className += " slideShow";
-
    }
+
 /*Selection options*/
 document.getElementById("opc-1").addEventListener("click",function(e){
 	activate("opc1",e);
@@ -49,9 +52,7 @@ document.getElementById("opc-4").addEventListener("click",function(e){
 	activate("opc4",e);
 });
 
-document.getElementById("continuar").addEventListener("click",function(e){
- window.location="level2.html";
-});
+
 
  function activate(clase,event){
  	var opcion =document.getElementsByClassName(""+clase+"");
@@ -68,6 +69,13 @@ document.getElementById("play").addEventListener("click",function(e){
 });
 
 /*APLICAR EFECTO OCULTAR Y MOSTRAR*/
-document.getElementById("ocultar").addEventListener("click",function(e){
-   
+
+document.getElementById("continuar").addEventListener("click",function(e){
+  document.getElementById("resultado").style.display="block";
 });
+
+document.getElementById("avatar").addEventListener("click",function(e){
+  window.location="avatar/example/default.html";
+});
+
+
